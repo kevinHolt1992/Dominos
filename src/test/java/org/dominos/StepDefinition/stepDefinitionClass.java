@@ -34,6 +34,7 @@ public class stepDefinitionClass extends Base{
 	@When("dominos menu page is visible")
 	public void dominos_menu_page_is_visible() {
 		click(ob.getOurMenuPageViewAll());
+		System.out.println();
 	
 	}
 
