@@ -5,6 +5,7 @@ package org.dominos.StepDefinition;
 import java.util.Iterator;
 
 import org.dominos.base.Base;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 import POM.POM;
@@ -15,14 +16,17 @@ import io.cucumber.java.en.When;
 
 
 public class stepDefinitionClass extends Base{
+	
 	public static WebDriver driver= RunnerClass.driver1;
 	
 	POM ob= new POM(driver);
+	
 
 	@Given("the user has to open dominos web page having internet connection")
 	public void the_user_has_to_open_dominos_web_page_having_internet_connection() {
 	    Url(driver,"https://www.dominos.co.in/");
 	    maxi(driver);
+	    
 	}
 
 	@When("user click on our menu")
@@ -133,4 +137,5 @@ public class stepDefinitionClass extends Base{
 		Thread.sleep(5000);
 		driver.close();
 	}
+	
 }

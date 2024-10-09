@@ -1,6 +1,13 @@
 package org.dominos.base;
 
+import java.io.File;
+
+import java.io.IOException;
+
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -37,4 +44,13 @@ public class Base {
 		js.executeScript("arguments[0].click();", element);
 		
 	}
+	
+	public static void toTakeSnap(WebDriver driver,String picname) throws IOException {
+        TakesScreenshot tk = (TakesScreenshot) driver;
+        File s = tk.getScreenshotAs(OutputType.FILE);
+        File d = new File("C:\\Users\\LENOVO\\eclipse-workspace\\org.dominos\\ScreenShots\\" );
+        FileUtils.copyFile(s, d);
+
+    }
+
 }

@@ -1,7 +1,5 @@
 package POM;
 
-import javax.xml.xpath.XPath;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -15,6 +13,8 @@ public class POM {
 		this.driver=driver2;
 		PageFactory.initElements(driver,this);
 	}
+	
+	
 	
 	@FindBy(xpath = "//a[.=\"OUR MENU\"]")
 	private WebElement HomePageOurMenu;
@@ -141,5 +141,7 @@ public class POM {
 	public WebElement getBtnpaneerAdd() {
 		return btnpaneerAdd;
 	}
+
 	
 }
+ 

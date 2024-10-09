@@ -16,7 +16,8 @@ public class RunnerClass {
 	public static WebDriver driver1;	
 	@BeforeClass
 	public static void start() {
-		driver1= new ChromeDriver();
+		driver1= new ChromeDriver();//this coment is added
+		
 	
 	}
 
