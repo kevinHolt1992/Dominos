@@ -1,0 +1,17 @@
+name: CI pipeline
+
+on:
+ push:
+  branches:
+   -main
+
+ jobs:
+  build:
+   run-on:ubunto-latest
+
+   steps:
+   - name: Checkout code
+     uses: actions/checkout@v2
+
+   - name: Build
+     run: |
